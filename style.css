@@ -1,0 +1,304 @@
+/***********************************
+ * Folha de estilos do aplicativo. *
+ * Versão 2                        *
+ ***********************************/
+
+/**
+ * Importa folhas de estilo para "reset" do CSS usando "Normalize" via CDN.
+ **/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+/**
+ * Importa fonte "Lato" do Google Fonts.
+ **/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/**
+ * Importa a biblioteca Font Awesome via CDN.
+ **/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+/**
+ * Reset de TODOS (*) os elementos.
+ **/
+* {
+  /* Tamanho do elemento é definido pelas bordas deste e não pelo conteúdo. */
+  box-sizing: border-box;
+  /* Remove serrilhado ao redor de imagens e links selecionados. */
+  outline: none;
+}
+
+/**
+ * Estiliza elementos raiz para ocupar todo o espaço da viewport.
+ **/
+html,
+body,
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Define fonte padrão usando "Google Fonts" e a unidade 1rem.
+ **/
+html,
+body {
+  font-family: "Lato", sans-serif;
+  /* Aqui, definimos que 1rem = 16px */
+  font-size: 16px;
+}
+
+/**
+ * Estilos padrão dos links.
+ **/
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+/**
+ * Estilos padrão dos links com ponteirodo mouse sobre.
+ **/
+a:hover {
+  color: orangered;
+}
+
+/**
+ * Define e formata o fundo da página no elemento root.
+ **/
+body {
+  background-attachment: fixed;
+  background-color: rgb(87, 164, 226);
+  background-image: url("/img/bg01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**
+ * Elemento raiz da viewport. Este elemento limita o crescimento das estruturas
+ * da página, independentemente da largura da tela.
+ **/
+#wrap {
+  min-width: 280px;
+  max-width: 1080px;
+  margin: auto;
+
+  /**
+   * Sticky footer. Isso força o footer no final da viewport quanto tivermos
+   * pouco conteúdo na página. 
+   **/
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * Estiliza cabeçalho da página. 
+ **/
+#wrap > header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/**
+ * Estiliza logotipo. 
+ **/
+#wrap > header img {
+  display: block;
+  margin: auto;
+  width: 5rem;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+/**
+ * Estiliza o título da página. 
+ **/
+#wrap > header h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: white;
+}
+
+/**
+ * Oculta a primeira camada do título. 
+ **/
+#wrap > header h1 span:first-child {
+  display: none;
+}
+
+/**
+ * Estiliza menu principal. 
+ **/
+#wrap > nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: orangered;
+  border: 1px solid orangered;
+  margin: 0.5rem;
+  margin-top: 0;
+  border-radius: 0.5rem;
+}
+
+/**
+ * Estiliza links do menu principal.
+ * Os ícones e respectivos textos ficam empilhados.
+ **/
+#wrap > nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/**
+ * Primeiro item do menu alinhado à esquerda e bordas redondas. 
+ **/
+#wrap > nav a:first-child {
+  margin-right: auto;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/**
+ * Último item do menu com bordas redondas.
+ **/
+#wrap > nav a:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/**
+ * Quando o ponteiro estiver sobre o item de menu. 
+ **/
+#wrap > nav a:hover {
+  color: orangered;
+  background-color: white;
+}
+
+/**
+ * Tamanho dos ícones do menu. 
+ **/
+#wrap > nav i {
+  font-size: 1.7rem;
+}
+
+/**
+ * Texto dos links dos itens. 
+ **/
+#wrap > nav span {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/**
+ * Estiliza conteúdo priincipal. 
+ **/
+#wrap > main {
+  /**
+   * Sticky footer. Isso força o footer no final da viewport quanto tivermos
+   * pouco conteúdo na página e este elemento cresce, empurando o footer para
+   * baixo. 
+   **/
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * Blocos do conteúdo principal. 
+ **/
+#wrap > main > article,
+#wrap > main > aside {
+  padding: 0 1rem;
+  background-color: white;
+  margin: 0.5rem;
+  margin-top: 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+}
+#wrap > main > article {
+  flex-grow: 1;
+}
+
+/**
+ * Estiliza o rodapé. 
+ **/
+#wrap > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin: 0.5rem;
+  margin-top: 0;
+  border-radius: 0.5rem;
+}
+
+/**
+ * Links do rodapé. 
+ **/
+#wrap > footer a {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/**
+ * Links do rodapé com cursor sobre. 
+ **/
+#wrap > footer a:hover {
+  color: orange;
+}
+
+/**
+ * Hack para evitar que o footer seja o último elemento.
+ **/
+.after-footer {
+  font-size: 0.001rem;
+}
+
+/* Altera visualização para resoluções maiores que 575px. */
+@media (min-width: 575px) {
+  #wrap > nav a {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+  #wrap > nav i {
+    font-size: 1.2rem;
+  }
+  #wrap > nav span {
+    margin-top: 0;
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #wrap > main {
+    flex-direction: row;
+  }
+  #wrap > main > article,
+  #wrap > main > aside {
+    padding: 0 1rem;
+    margin: 0.5rem;
+    margin-top: 0;
+  }
+  #wrap > main > aside {
+    margin-left: 0;
+    min-width: 220px;
+    max-width: 220px;
+  }
+}

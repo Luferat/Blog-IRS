@@ -1,0 +1,256 @@
+/**
+ * Folha de estilos do aplicativo.
+ *
+ * OBS1: Essas são as folhas de estilo (CSS) do tema (template) do aplicativo. 
+ * Posteriormente, cada página (conteúdo) terá sua própria folha de estilos,
+ * assim, somente as folhas de estilos necessárias serão carregadas.
+ *
+ * OBS2: Essas folhas de estilo estão definidas para "mobile first" (320px +),
+ * usando media queries (@media) para (re)definir o layout em telas maiores.
+ *
+ * Para saber mais:
+ *  • https://www.w3schools.com/css/
+ *  • https://www.w3schools.com/cssref/css_selectors.asp
+ *  • https://www.w3schools.com/cssref/
+ *
+ * Especificamente para nosso aplicativo, usaremos com destaque os recursos
+ * "Flexbox" e "Media Queries". Para saber mais, sobre estes recursos:
+ *  • https://www.w3schools.com/css/css3_flexbox.asp
+ *  • https://www.w3schools.com/css/css3_mediaqueries.asp
+ **/
+
+/**
+ * Importa folhas de estilo para "reset" do CSS usando "Normalize" via CDN.
+ *
+ * Essa biblioteca padroniza a visualização dos elementos do HTML entre os 
+ * diversos navegadores. Observe que existem outras bibliotecas que fazem o 
+ * mesmo trabalho, sendo a "Normalize", uma das mais simples e leves.
+ * 
+ * Para saber mais:
+ *  • https://necolas.github.io/normalize.css/
+ *  • https://en.wikipedia.org/wiki/Reset_style_sheet
+ *
+ * IMPORTANTE! Estamos importando essa e outras bibliotecas de um serviço CDN.
+ * Para saber mais sobre CDN:
+ *  • https://pt.wikipedia.org/wiki/Rede_de_fornecimento_de_conte%C3%BAdo
+ **/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+/**
+  * Importa fonte "Lato" do Google Fonts.
+  *
+  * Para saber mais:
+  *  • https://fonts.google.com/
+  **/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/**
+  * Importa a biblioteca Font Awesome via CDN.
+  *
+  * Para saber mais:
+  *  • https://fontawesome.com/
+  *  • https://www.w3schools.com/icons/default.asp
+  **/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+/**
+  * Reset de TODOS (*) os elementos.
+  *
+  * Complementa o RESET da biblioteca "Normalize".
+  **/
+* {
+  /* Tamanho do elemento é definido pelas bordas deste e não pelo conteúdo. */
+  box-sizing: border-box;
+  /* Remove serrilhado ao redor de imagens e links selecionados. */
+  outline: none;
+}
+
+/* Estiliza elementos raiz para ocupar todo o espaço da viewport. */
+html,
+body,
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+  * Define fonte padrão usando "Google Fonts" e a unidade 1rem.
+  *
+  * Para saber mais sobre unidades de medida:
+  *  • https://www.w3schools.com/cssref/css_units.asp
+  **/
+html,
+body {
+  font-family: "Lato", sans-serif;
+  /* Aqui, definimos que 1rem = 16px */
+  font-size: 16px;
+}
+
+/* Estilos padrão dos links. */
+
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+/* Estilos padrão dos links com ponteirodo mouse sobre. */
+
+a:hover {
+  color: orangered;
+}
+
+/**
+  * Define e formata o fundo da página no elemento root.
+  *
+  * Para saber mais:
+  *  • https://www.w3schools.com/css/css_background.asp
+  **/
+body {
+  background-attachment: fixed;
+  background-color: rgb(87, 164, 226);
+  background-image: url("/img/bg01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**
+  * Elemento raiz da viewport. Este elemento limita o crescimento das estruturas
+  * da página, independentemente da largura da tela.
+  **/
+#wrap {
+  min-width: 280px;
+  max-width: 1080px;
+  margin: auto;
+
+  /**
+    * Sticky footer. Isso força o footer no final da viewport quanto tivermos
+    * pouco conteúdo na página. 
+    **/
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estiliza cabeçalho da página. */
+#wrap > header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estiliza logotipo. */
+#wrap > header img {
+  display: block;
+  margin: auto;
+  width: 5rem;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+/* Estiliza o título da página. */
+#wrap > header h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: yellow;
+}
+
+/* Oculta a primeira camada do título. */
+#wrap > header h1 span:first-child {
+  display: none;
+}
+
+/* Estiliza menu principal. */
+#wrap > nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: orangered;
+  border: 1px solid orangered;
+}
+
+/**
+  * Estiliza links do menu principal. Os ícones e respectivos textos ficam
+  * empilhados.
+  **/
+#wrap > nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* Primeiro item do menu alinhado à esquerda. */
+#wrap > nav a:first-child {
+  margin-right: auto;
+}
+
+/* Quando o ponteiro estiver sobre o item de menu. */
+#wrap > nav a:hover {
+  color: orangered;
+  background-color: white;
+}
+
+/* Tamanho dos ícones do menu. */
+#wrap > nav i {
+  font-size: 1.7rem;
+}
+
+/* Texto dos links dos itens. */
+#wrap > nav span {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Estiliza conteúdo priincipal. */
+#wrap > main {
+  background-color: white;
+
+  /**
+    * Sticky footer. Isso força o footer no final da viewport quanto tivermos
+    * pouco conteúdo na página e este elemento cresce, empurando o footer para
+    * baixo. 
+    **/
+  flex-grow: 1;
+}
+
+/* Blocos do conteúdo principal. */
+#wrap > main > article,
+#wrap > main > aside {
+  padding: 0 1rem;
+}
+
+/* Desenha uma borda para separar o conteúdo principal. */
+#wrap > main > aside {
+  border-top: 3px dotted orangered;
+}
+
+/* Estiliza o rodapé. */
+#wrap > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+/* Links do rodapé. */
+#wrap > footer a {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Links do rodapé com cursor sobre. */
+#wrap > footer a:hover {
+  color: orange;
+}

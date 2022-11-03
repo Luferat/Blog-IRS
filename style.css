@@ -98,7 +98,7 @@ body {
 /**
  * Estiliza cabeçalho da página. 
  **/
-#wrap > header {
+#wrap>header {
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
@@ -109,7 +109,7 @@ body {
 /**
  * Estiliza logotipo. 
  **/
-#wrap > header img {
+#wrap>header img {
   display: block;
   margin: auto;
   width: 5rem;
@@ -119,7 +119,7 @@ body {
 /**
  * Estiliza o título da página. 
  **/
-#wrap > header h1 {
+#wrap>header h1 {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -132,14 +132,14 @@ body {
 /**
  * Oculta a primeira camada do título. 
  **/
-#wrap > header h1 span:first-child {
+#wrap>header h1 span:first-child {
   display: none;
 }
 
 /**
  * Estiliza menu principal. 
  **/
-#wrap > nav {
+#wrap>nav {
   display: flex;
   justify-content: flex-end;
   background-color: orangered;
@@ -153,7 +153,7 @@ body {
  * Estiliza links do menu principal.
  * Os ícones e respectivos textos ficam empilhados.
  **/
-#wrap > nav a {
+#wrap>nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +166,7 @@ body {
 /**
  * Primeiro item do menu alinhado à esquerda e bordas redondas. 
  **/
-#wrap > nav a:first-child {
+#wrap>nav a:first-child {
   margin-right: auto;
   border-radius: 0.5rem 0 0 0.5rem;
 }
@@ -174,14 +174,14 @@ body {
 /**
  * Último item do menu com bordas redondas.
  **/
-#wrap > nav a:last-child {
+#wrap>nav a:last-child {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
 /**
  * Quando o ponteiro estiver sobre o item de menu. 
  **/
-#wrap > nav a:hover {
+#wrap>nav a:hover {
   color: orangered;
   background-color: white;
 }
@@ -189,14 +189,14 @@ body {
 /**
  * Tamanho dos ícones do menu. 
  **/
-#wrap > nav i {
+#wrap>nav i {
   font-size: 1.7rem;
 }
 
 /**
  * Texto dos links dos itens. 
  **/
-#wrap > nav span {
+#wrap>nav span {
   display: inline-block;
   margin-top: 0.25rem;
   font-size: 0.9rem;
@@ -205,7 +205,7 @@ body {
 /**
  * Estiliza conteúdo priincipal. 
  **/
-#wrap > main {
+#wrap>main {
   /**
    * Sticky footer. Isso força o footer no final da viewport quanto tivermos
    * pouco conteúdo na página e este elemento cresce, empurando o footer para
@@ -219,8 +219,8 @@ body {
 /**
  * Blocos do conteúdo principal. 
  **/
-#wrap > main > article,
-#wrap > main > aside {
+#wrap>main>article,
+#wrap>main>aside {
   padding: 0 1rem;
   background-color: white;
   margin: 0.5rem;
@@ -228,14 +228,15 @@ body {
   overflow: auto;
   border-radius: 0.5rem;
 }
-#wrap > main > article {
+
+#wrap>main>article {
   flex-grow: 1;
 }
 
 /**
  * Estiliza o rodapé. 
  **/
-#wrap > footer {
+#wrap>footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -249,18 +250,33 @@ body {
 /**
  * Links do rodapé. 
  **/
-#wrap > footer a {
-  display: inline-block;
+#wrap>footer a {
   padding: 0.5rem;
-  font-size: 1.5rem;
   color: white;
+}
+
+#wrap>footer i {
+  font-size: 1.5rem;
 }
 
 /**
  * Links do rodapé com cursor sobre. 
  **/
-#wrap > footer a:hover {
+#wrap>footer a:hover {
   color: orange;
+}
+
+#wrap>footer div {
+  text-align: center;
+}
+
+#wrap>footer div small {
+  font-size: .75rem !important;
+  display: block;
+}
+
+#wrap>footer div small a {
+  color: aqua;
 }
 
 /**
@@ -272,14 +288,16 @@ body {
 
 /* Altera visualização para resoluções maiores que 575px. */
 @media (min-width: 575px) {
-  #wrap > nav a {
+  #wrap>nav a {
     flex-direction: row;
     padding: 0.5rem;
   }
-  #wrap > nav i {
+
+  #wrap>nav i {
     font-size: 1.2rem;
   }
-  #wrap > nav span {
+
+  #wrap>nav span {
     margin-top: 0;
     margin-left: 0.5rem;
     font-size: 1.1rem;
@@ -287,16 +305,18 @@ body {
 }
 
 @media (min-width: 768px) {
-  #wrap > main {
+  #wrap>main {
     flex-direction: row;
   }
-  #wrap > main > article,
-  #wrap > main > aside {
+
+  #wrap>main>article,
+  #wrap>main>aside {
     padding: 0 1rem;
     margin: 0.5rem;
     margin-top: 0;
   }
-  #wrap > main > aside {
+
+  #wrap>main>aside {
     margin-left: 0;
     min-width: 220px;
     max-width: 220px;

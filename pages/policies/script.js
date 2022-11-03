@@ -1,0 +1,1 @@
+console.log('Se vê isso é porque o JavaScript funciona!');

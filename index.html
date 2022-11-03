@@ -6,174 +6,142 @@
     • https://www.w3schools.com/html
 -->
 <html lang="pt-br">
-  <!-- Cabeçalho com metadados do documento -->
-  <head>
-    <!-- Define a tabela de caracteres universal -->
-    <meta charset="UTF-8" />
+<!-- Cabeçalho com metadados do documento -->
 
-    <!-- Torna a página responsivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <!-- Define a tabela de caracteres universal -->
+  <meta charset="UTF-8" />
 
-    <!-- Carrega folhas de estilo do aplicativo -->
-    <!-- <link rel="stylesheet" href="/style.velho.css" /> -->
-    <!-- Descomente a linha acima e comente a linha abaixo para usar a versão anterior do CSS. -->
-    <link rel="stylesheet" href="/style.css" />
+  <!-- Torna a página responsivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--
+  <!-- Carrega folhas de estilo do aplicativo -->
+  <!-- <link rel="stylesheet" href="/style.velho.css" /> -->
+  <!-- Descomente a linha acima e comente a linha abaixo para usar a versão anterior do CSS. -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!--
       Define o ícone de favoritos.
       Para saber mais:
         • https://pt.wikipedia.org/wiki/Favicon
         • https://www.w3schools.com/html/html_favicon.asp
     -->
-    <link rel="shortcut icon" href="img/logo01.png" />
+  <link rel="shortcut icon" href="img/logo01.png" />
 
-    <!-- Título do documento -->
-    <title>Blog IRS</title>
-  </head>
+  <link rel="stylesheet" href="" id="pageCSS">
 
-  <!-- 
+  <!-- Título do documento -->
+  <title>Blog IRS</title>
+</head>
+
+<!-- 
     Corpo do documento (viewport).
     Para saber mais:
       • https://www.w3schools.com/css/css_rwd_viewport.asp
   -->
-  <body>
-    <!-- Âncora "topo da página" -->
-    <a id="top"></a>
 
-    <!-- 
+<body>
+  <!-- Âncora "topo da página" -->
+  <a id="top"></a>
+
+  <!-- 
       Container da página:
       Este elemento permite limitar o tamanho mínimo e máximo da página
       e também centraliza ela na tela, em telas maiores.
      -->
-    <div id="wrap">
-      <!-- Cabeçalho da página -->
-      <header>
-        <!-- Logotipo clicável usando Font Awesome -->
-        <!-- <a href="/"><i class="fa-solid fa-book fa-fw"></i></a> -->
+  <div id="wrap">
+    <!-- Cabeçalho da página -->
+    <header>
+      <!-- Logotipo clicável usando Font Awesome -->
+      <!-- <a href="/"><i class="fa-solid fa-book fa-fw"></i></a> -->
 
-        <!-- Logotipo clicável usando imagem -->
-        <a href="/">
-          <img src="img/logo01.png" alt="Logotipo do Blog IRS" />
-        </a>
+      <!-- Logotipo clicável usando imagem -->
+      <a href="/">
+        <img src="img/logo01.png" alt="Logotipo do Blog IRS" />
+      </a>
 
-        <!-- Título e slogan do site / página -->
-        <h1>
-          <span>Blog IRS</span>
-          <span>Instituto</span>
-          <span>Rogério</span>
-          <span>Steinberg</span>
-        </h1>
-      </header>
+      <!-- Título e slogan do site / página -->
+      <h1>
+        <span>Blog IRS</span>
+        <span>Instituto</span>
+        <span>Rogério</span>
+        <span>Steinberg</span>
+      </h1>
+    </header>
 
-      <!--
+    <!--
           Menu principal:
             / → Raiz do aplicativo → Será carregada a página inicial;
             /contacts → Página com formulário e links de contato;
             /about → Sobre o site, autor e privacidade;
             /profile → Gestão do usuário (login, logou, perfil, ...).
        -->
-      <nav>
-        <!-- Link do item de menu para a página especificada → / -->
-        <a href="home">
-          <!--
+    <nav>
+      <!-- Link do item de menu para a página especificada → / -->
+      <a href="home">
+        <!--
             Ícone do ítem usando Font Awesome.
             Lembre-se de acrescentar "fa-fw" na classe dos ícones. 
           -->
-          <i class="fa-solid fa-house fa-fw"></i>
-          <!-- Etiqueta (label) do item -->
-          <span>Início</span>
-        </a>
+        <i class="fa-solid fa-house fa-fw"></i>
+        <!-- Etiqueta (label) do item -->
+        <span>Início</span>
+      </a>
 
-        <!-- 
+      <!-- 
           Outros itens do menu. 
           Tem a mesma estrutura do anterior. 
         -->
-        <a href="contacts">
-          <i class="fa-solid fa-comments fa-fw"></i>
-          <span>Contatos</span>
-        </a>
+      <a href="contacts">
+        <i class="fa-solid fa-comments fa-fw"></i>
+        <span>Contatos</span>
+      </a>
 
-        <a href="about">
-          <i class="fa-solid fa-circle-info fa-fw"></i>
-          <span>Sobre</span>
-        </a>
-
-        <a href="profile">
-          <i class="fa-solid fa-user fa-fw"></i>
-          <span>Login</span>
-        </a>
-      </nav>
+      <a href="about">
+        <i class="fa-solid fa-circle-info fa-fw"></i>
+        <span>Sobre</span>
+      </a>
 
       <!-- 
+          <a href="profile">
+            <i class="fa-solid fa-user fa-fw"></i>
+            <span>Login</span>
+          </a>
+        -->
+    </nav>
+
+    <!-- 
         Bloco do conteúdo.
         Este bloco terá um conteúdo diferente para cada página acessada.
       -->
-      <main>
-        <!-- Conteúdo principal -->
-        <article>
-          <!-- -------------------------------------- -->
-          <!-- Conteúdo "fake" somente para os testes -->
-          <!-- -------------------------------------- -->
-          <h2>Título disso</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus magni expedita recusandae asperiores amet doloremque ut, nobis minima veniam
-            tempora et esse porro voluptatem nostrum ex quo assumenda hic sapiente.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laboriosam libero tenetur saepe doloribus corrupti hic non sunt. Vel,
-            necessitatibus ex! Animi sed voluptas quas omnis maiores at repudiandae molestias.
-          </p>
-          <img src="https://picsum.photos/200/300" alt="Imagem alternativa" />
-          <h4>Links inúteis:</h4>
-          <ul>
-            <li><a href="https://github.com/Luferat" target="_blank">GitHub do Fessô</a></li>
-            <li><a href="https://facebook.com/Luferat" target="_blank">Fecebook do Fessô</a></li>
-            <li><a href="https://irs.org.br" target="_blank">Site do IRS</a></li>
-          </ul>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque recusandae minus sequi quibusdam distinctio molestias veritatis
-            consequuntur debitis assumenda soluta, iusto eius veniam dignissimos? Officia tempore natus quae rem!
-          </p>
-          <!-- ---------------------- -->
-          <!-- Fim do conteúdo "fake" -->
-          <!-- ---------------------- -->
-        </article>
+    <main></main>
 
-        <!-- Conteúdo complementar / barra lateral -->
-        <aside>
-          <!-- -------------------------------------- -->
-          <!-- Conteúdo "fake" somente para os testes -->
-          <!-- -------------------------------------- -->
-          <h3>Complemento</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, temporibus ducimus facilis architecto.</p>
-          <!-- ---------------------- -->
-          <!-- Fim do conteúdo "fake" -->
-          <!-- ---------------------- -->
-        </aside>
-      </main>
+    <!-- Rodapé da página -->
+    <footer>
+      <!-- Link para a raiz do aplicativo (página inicial) -->
+      <a href="home"><i class="fa-solid fa-house fa-fw"></i></a>
+      <!-- Licença do aplicativo -->
+      <div>
+        &copy; 2022 IRS
+        <small><a href="policies">Políticas de Privacidade</a></small>
+      </div>
+      <!-- Link para o topo desta página -->
+      <a href="#top"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+    </footer>
+    <span class="after-footer">&nbsp;</span>
+  </div>
 
-      <!-- Rodapé da página -->
-      <footer>
-        <!-- Link para a raiz do aplicativo (página inicial) -->
-        <a href="home"><i class="fa-solid fa-house fa-fw"></i></a>
-        <!-- Licença do aplicativo -->
-        <div>&copy; 2022 IRS</div>
-        <!-- Link para o topo desta página -->
-        <a href="#top"><i class="fa-solid fa-circle-up fa-fw"></i></a>
-      </footer>
-      <span class="after-footer">&nbsp;</span>
-    </div>
-
-    <!--
+  <!--
       Importa a biblioteca JavaScript "jQuery" via CDN.
       Para saber mais:
         • https://jquery.com/
         • https://www.w3schools.com/jquery/
         • https://github.com/jquery/jquery
     -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <!-- Inclui o JavaScript do aplicativo, que depende de "jQuery" -->
-    <script src="/index.js"></script>
-  </body>
+  <!-- Inclui o JavaScript do aplicativo, que depende de "jQuery" -->
+  <script src="/index.js"></script>
+</body>
+
 </html>

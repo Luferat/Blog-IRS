@@ -40,9 +40,16 @@ function runApp() {
   // console.log("Blog IRS"); // Exibe uma mensagem no console do navegador.
 
   /**
-   * Carrega a página inicial do site.
+   * Obtém nome da página que está sendo acessada, do 'localStorage'.
+   * Estude '/404.html' para mais detalhes.
    **/
-  loadPage('home');
+  let path = localStorage.getItem('path');
+  if (path) {                         // Se cliente está acessando uma página específica...
+    localStorage.removeItem('path');  // Limpa o 'localStorage'.
+    loadPage(path);                   // Acessa a página solicitada.
+  } else {                            // Se não solicitou uma página específica...
+    loadPage('home');                 // Carrega a página inicial.
+  }
 
   /**
    * Monitora o evento 'click' no documento.
@@ -173,4 +180,18 @@ function loadPage(route) {
         $.getScript(page.js);
       }
     );
+
+  /**
+   * Rola a tela para o início, útil para links no final da página.
+   * Referências:
+   *  • https://www.w3schools.com/jsref/met_win_scrollto.asp
+   **/
+  window.scrollTo(0, 0);
+
+  /**
+   * Atualiza URL da página com o endereço da rota:
+   * Referências:
+   *  • https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
+   **/
+  window.history.pushState({}, '', route);
 }

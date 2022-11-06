@@ -1,2 +1,2 @@
 # Blog-IRS
-Created with CodeSandbox
+Aplicativo modelo em HTML, CSS e JavaScript.

@@ -95,7 +95,7 @@ function routerLink() {
     href.substr(0, 7) == 'http://' ||
     href.substr(0, 8) == 'https://' ||
     href.substr(0, 1) == '#'
-  ) return false;
+  ) return true;
 
   /**
    * Carrega a rota solicitada.

@@ -16,6 +16,22 @@
  */
 
 /**
+ * A variável 'site' contém a configuração inicial do aplicativo:
+ * Exemplo:
+ *    site.name → Nome do site
+ *    site.slogan → Slogan do site
+ * 
+ * OBS: se precisar, você pode criar outras configurações aqui.
+ * 
+ * Referências:
+ *  • https://www.w3schools.com/js/js_objects.asp  
+ **/
+site = {
+  name: 'Blog IRS',
+  slogan: 'Talento, a gente já tem!'
+}
+
+/**
  * Executa aplicativo "runApp" quando o documento estiver pronto.
  * Referências:
  *  • https://www.w3schools.com/jquery/jquery_syntax.asp
@@ -194,4 +210,34 @@ function loadPage(route) {
    *  • https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
    **/
   window.history.pushState({}, '', route);
+}
+
+/**
+ * Aplicativo que atualiza o título da página.
+ * 
+ * OBS1: este aplicativo deve ser executado quando o componente 'script.js' 
+ * for carregado. Veja exemplos em:
+ *    pages/about/script.js
+ *    pages/home/script.js
+ *
+ * OBS2: se um título não for definido → chageTitle(), usará o slogan do site 
+ * (site.slogan) para compor o título.
+ **/
+function changeTitle(title = '') {
+
+  // Se não definiu um título, por exemplo, em 'pages/home/script.js'...
+  if (title == '')
+
+    // O título será seguido do slogan do site.
+    tagTitle = `${site.name} ·:· ${site.slogan}`;
+
+  // Se definiu um título...
+  else
+
+    // O título será seguido do valor de 'title'.
+    tagTitle = `${site.name} ·:· ${title}`;
+
+  // Escreve o título da página na tag <title>...</title>.
+  $('title').text(tagTitle);
+
 }

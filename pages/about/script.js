@@ -1,1 +1,4 @@
-console.log('about ok');
+/**
+ * Define o título desta rota.
+ */
+changeTitle('Sobre...');

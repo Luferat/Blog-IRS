@@ -1,1 +1,4 @@
-console.log('contacts ok');
+/**
+ * Define o título desta rota.
+ */
+changeTitle('Faça contato');

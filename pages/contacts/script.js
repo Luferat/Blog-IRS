@@ -20,7 +20,7 @@ function runContacts() {
         }
     );
 
-    $.post(site.api + 'contacts/', form) // Envia dados para o back-end usando o método "POST":
+    $.post(site.apicontacts, form) // Envia dados para o back-end usando o método "POST":
         .done(function (data) { // Quando concluir o envio, recebe a resposta e armazena em 'data':
             if (data.status == 'error') { // Se a resposta foi um erro...
                 $('#error').html(listError(data.return)); // Formata e exibe a mensagem de erro dentro do formulário:

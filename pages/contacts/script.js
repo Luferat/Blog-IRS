@@ -36,6 +36,9 @@ function runContacts() {
 <blockquote>Seu contato foi enviado com sucesso.</blockquote>
 <em>Obrigado...</em>
                 `);
+
+                // Rola a página para o topo:
+                $(window).scrollTop(0);
             }
         });
 

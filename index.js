@@ -29,7 +29,7 @@
 site = {
   name: 'Blog IRS',
   slogan: 'Talento, a gente já tem!',
-  api: 'http://localhost/'
+  api: 'https://luferat.net/'
 }
 
 /**

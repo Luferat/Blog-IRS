@@ -1,3 +1,137 @@
 /**
  * Folhas de estilo da página 'contacts'.
  **/
+
+#contacts {
+    display: table;
+    margin: auto;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 1rem;
+}
+
+#contacts label {
+    display: block;
+    padding: 0 0 .25rem .25rem;
+}
+
+#contacts input, #contacts textarea, #contacts button {
+    padding: .5rem;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: .3rem;
+}
+
+#contacts input, #contacts textarea {
+    width: 100%;
+    border: 1px solid grey;
+    border-bottom: 3px solid grey;
+    background-color: rgba(255, 255, 255);
+}
+
+#contacts textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#contacts button {
+    padding: .25rem .5rem;
+    cursor: pointer;
+    border: none;
+}
+
+#contacts input:invalid, #contacts textarea:invalid {
+    border: 1px solid red;
+    border-bottom: 3px solid red;
+    background-color: rgb(255, 244, 244);
+}
+
+#contacts input:valid, #contacts textarea:valid {
+    border: 1px solid green;
+    border-bottom: 3px solid green;
+    background-color: rgb(232, 240, 254);
+}
+
+#contacts:invalid button, #contacts button:disabled {
+    background-color: rgb(219, 219, 219);
+    color: rgb(115, 115, 115);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#contacts:valid button {
+    background-color: steelblue;
+    color: white;
+}
+
+#error {
+    display: none;
+}
+
+.error {
+    display: table;
+    margin: auto;
+    background-color: #ffffcc;
+    color: darkred;
+    font-size: 90%;
+    padding: 0 1rem;
+    border: 1px solid orange;
+    border-radius: .4rem;
+}
+
+.social {
+    text-align: center;
+}
+
+.social a {
+    display: inline-block;
+    padding: .5rem;
+}
+
+.social i[class~=fa-facebook] {
+    color: #4267B2;
+}
+
+.social i[class~=fa-youtube] {
+    color: #FF0000;
+}
+
+.social i[class~=fa-github] {
+    color: rgb(61, 61, 61);
+}
+
+.social i[class~=fa-whatsapp] {
+    color: #128C7E;
+}
+
+.social i[class~=fa-phone] {
+    color: purple;
+}
+
+.social i[class~=fa-envelope] {
+    color: orange;
+}
+
+.about {
+    display: table;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.about a {
+    display: flex;
+    padding: .4rem 0;
+}
+
+.about a:hover {
+    text-decoration: none;
+}
+
+.about i {
+    font-size: 1.3rem;
+}
+
+.about a span {
+    display: inline-block;
+    margin-left: .4rem;
+}

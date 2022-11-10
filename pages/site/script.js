@@ -1,2 +1,2 @@
 // Define o título desta rota.
-changeTitle('Quem somos');
+changeTitle('Sobre o Blog-IRS');

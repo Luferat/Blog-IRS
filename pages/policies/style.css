@@ -1,3 +1,11 @@
 /**
  * Folhas de estilo da página 'policies'.
  **/
+ article small {
+    display: block;
+    text-align: right;
+ }
+
+ article p, article ol {
+    line-height: 1.3;
+ }

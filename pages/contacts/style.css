@@ -64,6 +64,13 @@
     color: white;
 }
 
+#contacts small {
+    color: red;
+    display: block;
+    text-align: center;
+    font-style: italic;
+}
+
 #error {
     display: none;
 }

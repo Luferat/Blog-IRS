@@ -1,3 +1,120 @@
 /**
  * Folhas de estilo da página 'contacts'.
  **/
+#contacts {
+    display: table;
+    margin: auto;
+}
+
+#contacts label {
+    display: block;
+    padding: 0 0 .25rem .5rem;
+}
+
+#contacts input,
+#contacts textarea,
+#contacts button {
+    padding: .5rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid grey;
+    border-radius: .4rem;
+}
+
+#contacts input,
+#contacts textarea {
+    width: 100%;
+    border-bottom: 3px solid grey;
+    background-color: rgb(232, 240, 254);
+}
+
+#contacts textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#contacts button {
+    background: linear-gradient(rgb(87, 150, 201), rgb(28, 69, 103));
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#contacts button:hover {
+    background: linear-gradient(rgb(255, 107, 53), rgb(171, 46, 0));
+}
+
+#contacts input:invalid,
+#contacts textarea:invalid {
+    border: 1px solid red;
+    border-bottom: 3px solid red;
+    background-color: rgb(255, 208, 208);
+}
+
+#contacts input:valid,
+#contacts textarea:valid {
+    border: 1px solid green;
+    border-bottom: 3px solid green;
+    background-color: rgb(232, 240, 254);
+}
+
+#contacts:invalid button {
+    background: linear-gradient(rgb(181, 181, 181), rgb(89, 89, 89));
+    pointer-events: none;
+}
+
+#contacts small {
+    display: block;
+    text-align: center;
+    color: red;
+}
+
+.social {
+    text-align: center;
+}
+
+.social a {
+    display: inline-block;
+    padding: .5rem;
+}
+
+.social i {
+    font-size: 3rem;
+}
+
+.social i[class~=fa-facebook] {
+    color: #1877f2;
+}
+
+.social i[class~=fa-instagram] {
+    color: #c13584;
+}
+
+.social i[class~=fa-whatsapp] {
+    color: #25d366;
+}
+
+.social i[class~=fa-envelope] {
+    color: red;
+}
+
+.social i[class~=fa-phone] {
+    color: rgb(73, 73, 73);
+}
+
+.social i[class~=fa-twitter] {
+    color: #1da1f2;
+}
+
+.about a {
+    display: block;
+    padding: .25rem;
+    line-height: 1.4;
+}
+
+.about span {
+    display: inline-block;
+    padding-left: .5rem;
+}

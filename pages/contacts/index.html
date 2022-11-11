@@ -3,11 +3,63 @@
 
   <h2>Faça Contato</h2>
 
+  <form action="https://luferat.net/contacts" method="post" id="contacts">
+    <input type="hidden" name="sendfrom" value="http://127.0.0.1:5000/contacts">
+    <input type="hidden" name="sendto" value="contato@luferat.net">
+
+    <p>Preencha todos os campos do formulário para entrar em contato conosco:</p>
+
+    <small>Todos os campos obrigatórios</small>
+
+    <p>
+      <label for="name">Seu nome:</label>
+      <input type="text" name="name" id="name" required minlength="2">
+    </p>
+
+    <p>
+      <label for="email">Seu e-mail:</label>
+      <input type="email" name="email" id="email" required>
+    </p>
+
+    <p>
+      <label for="subject">Assunto:</label>
+      <input type="text" name="subject" id="subject" required minlength="5">
+    </p>
+
+    <p>
+      <label for="message">Mensagem:</label>
+      <textarea name="message" id="message" required minlength="5"></textarea>
+    </p>
+
+    <p>
+      <button type="submit">Enviar</button>
+    </p>
+    &nbsp;
+  </form>
+
 </article>
 
 <!-- Conteúdo complementar / barra lateral -->
 <aside>
 
-  <h3>Complemento</h3>
+  <h3><i class="fa-solid fa-plus"></i> Contatos</h3>
+  <p>Você também pode nos conhecer e entrar em contato conosco pelas redes sociais e outras formas:</p>
+
+  <nav class="social">
+    <a href="https://facebook.com/Blog-IRS" target="_blank"><i class="fa-brands fa-facebook fa-fw"></i></a>
+    <a href="https://instagram.com/Blog-IRS" target="_blank"><i class="fa-brands fa-instagram fa-fw"></i></a>
+    <a href="https://wa.me/5521987654321" target="_blank"><i class="fa-brands fa-whatsapp fa-fw"></i></a>
+    <a href="mailto:blog@irs.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i></a>
+    <a href="tel:21987654321" target="_blank"><i class="fa-solid fa-phone fa-fw"></i></a>
+    <a href="https://twitter.com/Blog-IRS" target="_blank"><i class="fa-brands fa-twitter fa-fw"></i></a>
+    <br>&nbsp;
+  </nav>
+
+  <h3><i class="fa-solid fa-plus"></i> Sobre</h3>
+  <nav class="about">
+    <a href="site"><i class="fa-regular fa-file-code fa-fw"></i><span>Sobre o site</span></a>
+    <a href="team"><i class="fa-solid fa-users fa-fw"></i><span>Sobre os autores</span></a>
+    <a href="policies"><i class="fa-solid fa-user-lock fa-fw"></i><span>Sua privacidade</span></a>
+  </nav>
 
 </aside>

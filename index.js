@@ -29,7 +29,8 @@
 site = {
   name: 'Blog IRS',
   slogan: 'Talento, a gente já tem!',
-  apicontacts: 'https://luferat.net/contacts/'
+  apicontacts: 'https://luferat.net/contacts/',
+  adminMail: 'blog@irs.org.br'
 }
 
 /**
@@ -65,7 +66,7 @@ function runApp() {
     localStorage.removeItem('path');  // Limpa o 'localStorage'.
     loadPage(path);                   // Acessa a página solicitada.
   } else {                            // Se não solicitou uma página específica...
-    loadPage('contacts');             // Carrega a página inicial.
+    loadPage('home');                 // Carrega a página inicial.
   }
 
   /**

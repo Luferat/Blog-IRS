@@ -1,11 +1,30 @@
 /**
  * Folhas de estilo da página 'policies'.
  **/
- article small {
-    display: block;
-    text-align: right;
- }
+article small {
+   display: block;
+   text-align: right;
+}
 
- article p, article ol {
-    line-height: 1.3;
- }
+article p, article ol {
+   line-height: 1.3;
+}
+
+.about a {
+   display: block;
+   padding: .25rem;
+   line-height: 1.4;
+}
+
+.about span {
+   display: inline-block;
+   padding-left: .5rem;
+}
+
+.domainURL {
+   font-weight: bold;
+}
+
+.emailAddress {
+   font-style: italic;
+}

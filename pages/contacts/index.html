@@ -3,14 +3,20 @@
 
   <h2>Faça Contato</h2>
 
-  <!-- Action do formulário deve apontar para o endereço da API que vai processá-lo -->
-  <form action="https://luferat.net/contacts" method="post" id="contacts">
+  <!-- Action do formulário deve apontar para o endereço da API que vai processá-lo. -->
+  <form action="https://luferat.net/contacts/" method="post" id="contacts">
 
-    <!-- Endereço do site (origin) onde o formulário está hospedado. Isso será preenchido pelo script. -->
+    <!-- Endereço do site (origin) onde o formulário está hospedado. Isso será preenchido pelo script e deve terminar com '/'. -->
     <input type="hidden" name="sendfrom" value="" id="sendfrom">
 
-    <!-- E-mail do destinatário do formulário, normalmente o administrador ou operador do site. -->
+    <!-- 
+      E-mail do destinatário do formulário, normalmente o administrador ou operador do site.
+      Se não for definido, 
+     -->
     <input type="hidden" name="sendto" value="contato@luferat.net" id="sendto">
+
+    <!-- Token de autorização gerado pela API. Obtenha com o proprietário da API. -->
+    <input type="hidden" name="sendtoken" value="da70967efc9a2a793c5dadbeaacefe0af1cd3025" id="sendtoken">
 
     <p>Preencha todos os campos do formulário para entrar em contato conosco:</p>
 

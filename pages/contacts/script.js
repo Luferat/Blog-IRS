@@ -2,7 +2,7 @@
 changeTitle('Faça contato');
 
 // Atualiza o campo 'sendfrom' com o endereço correto do site:
-$('#sendfrom').val(location.origin);
+$('#sendfrom').val(location.origin + '/');
 
 // Se o formulário foi enviado, executa 'runContacts':
 $('#contacts').submit(runContacts);
@@ -23,7 +23,7 @@ function runContacts() {
         }
     );
 
-    $.post(site.apicontacts, form) // Envia dados para o back-end usando o método "POST".
+    $.post($(this).attr('action'), form) // Envia dados para o back-end usando o método "POST".
         .done(function (data) { // Quando concluir o envio (done), recebe a resposta, armazena em 'data' e executa a função.
             if (data.status == 'error') { // Se a resposta foi um erro → status = 'error'...
                 $('#error').html(listError(data.return)); // Formata e exibe a mensagem de erro dentro do formulário.
@@ -39,9 +39,7 @@ function runContacts() {
 <blockquote>Seu contato foi enviado com sucesso.</blockquote>
 <em>Obrigado...</em>
                 `);
-
-                // Rola a página para o topo:
-                $(window).scrollTop(0);
+                $(window).scrollTop(0); // Rola a página para o topo:
             }
         });
 

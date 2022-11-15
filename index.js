@@ -28,7 +28,8 @@
  **/
 site = {
   name: 'Blog IRS',
-  slogan: 'Talento, a gente já tem!'
+  slogan: 'Talento, a gente já tem!',
+  apicontacts: 'https://luferat.net/contacts/'
 }
 
 /**
@@ -64,7 +65,7 @@ function runApp() {
     localStorage.removeItem('path');  // Limpa o 'localStorage'.
     loadPage(path);                   // Acessa a página solicitada.
   } else {                            // Se não solicitou uma página específica...
-    loadPage('home');                 // Carrega a página inicial.
+    loadPage('contacts');             // Carrega a página inicial.
   }
 
   /**

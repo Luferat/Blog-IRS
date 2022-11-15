@@ -1,4 +1,2 @@
-/**
- * Define o título desta rota.
- */
+// Define o título desta rota.
 changeTitle('Página modelo');

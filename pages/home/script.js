@@ -1,6 +1,2 @@
-/**
- * Define o título desta rota.
- * 
- * OBS: para a rota inicial (home), deixe em branco para usar o sloga do site.
- */
-changeTitle();
+// Define o título desta rota.
+changeTitle(); // Deixamos em branco para uas ro slogan:

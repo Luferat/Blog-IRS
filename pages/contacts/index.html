@@ -3,17 +3,32 @@
 
   <h2>Faça Contato</h2>
 
+  <!-- Action do formulário deve apontar para o endereço da API que vai processá-lo -->
   <form action="https://luferat.net/contacts" method="post" id="contacts">
-    <input type="hidden" name="sendfrom" value="http://127.0.0.1:5000/contacts">
-    <input type="hidden" name="sendto" value="contato@luferat.net">
+
+    <!-- Endereço do site (origin) onde o formulário está hospedado. Isso será preenchido pelo script. -->
+    <input type="hidden" name="sendfrom" value="" id="sendfrom">
+
+    <!-- E-mail do destinatário do formulário, normalmente o administrador ou operador do site. -->
+    <input type="hidden" name="sendto" value="contato@luferat.net" id="sendto">
 
     <p>Preencha todos os campos do formulário para entrar em contato conosco:</p>
 
+    <!-- Exibe as mensagens de erro. -->
+    <div id="error"></div>
+
     <small>Todos os campos obrigatórios</small>
+
+    <!--
+      IMPORTANTE!
+      Este formulário usa uma validação de front-end simples, baseada nas 
+      regras do próprio HTML e CSS. Se necessário, uma validação mais completa
+      pode ser implementada usando recursos do JavaScript.
+    -->
 
     <p>
       <label for="name">Seu nome:</label>
-      <input type="text" name="name" id="name" required minlength="2">
+      <input type="text" name="name" id="name" required minlength="3">
     </p>
 
     <p>

@@ -1,32 +1,31 @@
 /**
  * Folhas de estilo da página 'contacts'.
  **/
-
-#contacts {
+ #contacts {
     display: table;
     margin: auto;
-    width: 100%;
-    max-width: 480px;
-    margin-bottom: 1rem;
 }
 
 #contacts label {
     display: block;
-    padding: 0 0 .25rem .25rem;
+    padding: 0 0 .25rem .5rem;
 }
 
-#contacts input, #contacts textarea, #contacts button {
+#contacts input,
+#contacts textarea,
+#contacts button {
     padding: .5rem;
     font-family: inherit;
     font-size: inherit;
-    border-radius: .3rem;
+    border: 1px solid grey;
+    border-radius: .4rem;
 }
 
-#contacts input, #contacts textarea {
+#contacts input,
+#contacts textarea {
     width: 100%;
-    border: 1px solid grey;
     border-bottom: 3px solid grey;
-    background-color: rgba(255, 255, 255);
+    background-color: rgb(232, 240, 254);
 }
 
 #contacts textarea {
@@ -35,55 +34,41 @@
 }
 
 #contacts button {
-    padding: .25rem .5rem;
-    cursor: pointer;
+    background: linear-gradient(rgb(87, 150, 201), rgb(28, 69, 103));
+    color: white;
     border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: .2s;
 }
 
-#contacts input:invalid, #contacts textarea:invalid {
+#contacts button:hover {
+    background: linear-gradient(rgb(255, 107, 53), rgb(171, 46, 0));
+}
+
+#contacts input:invalid,
+#contacts textarea:invalid {
     border: 1px solid red;
     border-bottom: 3px solid red;
-    background-color: rgb(255, 244, 244);
+    background-color: rgb(255, 208, 208);
 }
 
-#contacts input:valid, #contacts textarea:valid {
+#contacts input:valid,
+#contacts textarea:valid {
     border: 1px solid green;
     border-bottom: 3px solid green;
     background-color: rgb(232, 240, 254);
 }
 
-#contacts:invalid button, #contacts button:disabled {
-    background-color: rgb(219, 219, 219);
-    color: rgb(115, 115, 115);
-    cursor: not-allowed;
+#contacts:invalid button {
+    background: linear-gradient(rgb(181, 181, 181), rgb(89, 89, 89));
     pointer-events: none;
 }
 
-#contacts:valid button {
-    background-color: steelblue;
-    color: white;
-}
-
 #contacts small {
-    color: red;
     display: block;
     text-align: center;
-    font-style: italic;
-}
-
-#error {
-    display: none;
-}
-
-.error {
-    display: table;
-    margin: auto;
-    background-color: #ffffcc;
-    color: darkred;
-    font-size: 90%;
-    padding: 0 1rem;
-    border: 1px solid orange;
-    border-radius: .4rem;
+    color: red;
 }
 
 .social {
@@ -95,50 +80,41 @@
     padding: .5rem;
 }
 
+.social i {
+    font-size: 3rem;
+}
+
 .social i[class~=fa-facebook] {
-    color: #4267B2;
+    color: #1877f2;
 }
 
-.social i[class~=fa-youtube] {
-    color: #FF0000;
-}
-
-.social i[class~=fa-github] {
-    color: rgb(61, 61, 61);
+.social i[class~=fa-instagram] {
+    color: #c13584;
 }
 
 .social i[class~=fa-whatsapp] {
-    color: #128C7E;
-}
-
-.social i[class~=fa-phone] {
-    color: purple;
+    color: #25d366;
 }
 
 .social i[class~=fa-envelope] {
-    color: orange;
+    color: red;
 }
 
-.about {
-    display: table;
-    margin: auto;
-    margin-bottom: 1rem;
+.social i[class~=fa-phone] {
+    color: rgb(73, 73, 73);
+}
+
+.social i[class~=fa-twitter] {
+    color: #1da1f2;
 }
 
 .about a {
-    display: flex;
-    padding: .4rem 0;
+    display: block;
+    padding: .25rem;
+    line-height: 1.4;
 }
 
-.about a:hover {
-    text-decoration: none;
-}
-
-.about i {
-    font-size: 1.3rem;
-}
-
-.about a span {
+.about span {
     display: inline-block;
-    margin-left: .4rem;
+    padding-left: .5rem;
 }

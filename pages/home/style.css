@@ -1,3 +1,77 @@
 /**
  * Folhas de estilo da página 'home'.
  **/
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(87, 164, 226);
+    border-radius: .5rem;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: .4rem .4rem 0 0;
+}
+
+.card h3,
+.card span {
+    margin: 0;
+    padding: .5rem;
+}
+
+.card span {
+    flex-grow: 1;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    background-color: rgb(87, 164, 226);
+    color: white;
+    transition: .2s;
+    border-radius: 0 0 .4rem .4rem;
+}
+
+.card a:hover {
+    background-color: rgb(34, 88, 133);
+}
+
+@media (min-width: 575px) {
+    .cards {
+        display: flex;
+    }
+
+    .cards .card:first-child {
+        margin-right: .5rem;
+    }
+
+    .cards .card:last-child {
+        margin-left: .5rem;
+    }
+
+    .card {
+        width: 50%;
+    }
+}
+
+.destaque img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.destaque a {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    background-color: rgb(87, 164, 226);
+    color: white;
+    transition: .2s;
+    border-radius: .3rem;
+}

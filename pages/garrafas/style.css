@@ -1,0 +1,23 @@
+/**
+ * Folhas de estilo da página 'modelo'.
+ **/
+
+article img {
+    width: 100%;
+}
+
+.destaque img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.destaque a {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    background-color: rgb(87, 164, 226);
+    color: white;
+    transition: .2s;
+    border-radius: .3rem;
+}

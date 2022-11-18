@@ -28,9 +28,7 @@
  **/
 site = {
   name: 'Blog IRS',
-  slogan: 'Talento, a gente já tem!',
-  apicontacts: 'https://luferat.net/contacts/',
-  adminMail: 'blog@irs.org.br'
+  slogan: 'Talento, a gente já tem!'
 }
 
 /**
